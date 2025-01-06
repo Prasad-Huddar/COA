@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Course Project</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Font Awesome Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/skin.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="./script/index.js"></script>
+</head>
+<style>
+/* Adjust the existing CSS rules for the boxes */
+.large-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #a6c4cf;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.large-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.large-box img {
+    width: 30%; /* Reduced image size */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.large-box .text-box {
+    width: 70%;
+}
+
+.large-box .text-box p,
+.large-box .text-box ul {
+    font-size: 20px;
+    color: #070707;
+    line-height: 1.6;
+}
+
+.large-box .text-box ul li {
+    margin-bottom: 10px;
+}
+
+.large-box .text-box h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* New box layout for 8-bit ALU */
+.new-box {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    padding: 20px;
+    margin: 30px auto; /* Auto margin for centering, 30px top and bottom */
+    margin-left: 20px; /* Added left margin */
+    margin-right: 20px; /* Added right margin */
+    background-color: #fffcfc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.new-box .text-box ul {
+    margin: 10px 0;
+    padding-left: 20px; /* Adds indentation for list items */
+    list-style-type: disc; /* Standard bullet points */
+    color: #ffffff; /* Ensures list text is white */
+}
+
+.new-box .text-box ul li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+    font-size: 18px; /* Matches paragraph font size */
+    line-height: 1.8; /* Matches paragraph line height */
+    color: #ffffff; /* Ensures list items are white */
+}
+.new-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-box .text-box {
+    width: 100%;
+}
+
+.new-box .text-box h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.new-box .text-box p {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.new-box .text-box ul {
+    font-size: 20px;
+    color: #393838;
+    line-height: 1.6;
+}
+
+.new-box .text-box ul li {
+    margin-bottom: 10px;
+}
+
+
+
+/* Specific color for the "What is an ALU?" heading */
+.subsection3 h2 {
+    color: black; /* Black color for the heading */
+}
+
+/* Adjusted image section for consistency */
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.image-section img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+</style>
+
+<body id="wrapper">
+
+    <section id="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 top-header-links">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="social_links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <h1>COA</h1>
+                    </a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="courselearning.html">Course Learning</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="courseproject-page">
+        <div class="subsection1">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h1>Special Function Register </h1>
+                </div>
+            </div>
+        </div>
+
+        
+        <section id="courseproject-page">
+            <div class="subsection3">
+                <div class="container text-center">
+
+                    
+                                <!-- New box layout (swapped positions with large box) -->
+                                <div class="new-box">
+                                    <div class="text-box">
+                                        <h3>Special Registers File (SRF)</h3>
+                                        <p>SRF typically stands for Special Registers File, which refers to a set of registers within a processor or microcontroller that are dedicated to controlling specific hardware functions and system configurations. Unlike general-purpose registers used for regular data manipulation during program execution, SRFs handle specialized tasks such as managing I/O operations, controlling timers, handling interrupts, and configuring communication protocols like UART, SPI, or I2C. These registers are crucial for managing the interaction between the software and the underlying hardware components. They are often located at specific memory addresses, distinct from the general-purpose registers, and are mapped to control hardware features.</p>
+                    
+                                        <p><strong>Key Characteristics:</strong></p>
+                                        <ul>
+                                            <li><strong>Dedicated Functionality:</strong> SRFs control hardware features such as GPIO (General Purpose I/O), timers, serial communication (UART, SPI, I2C), and interrupt handling, making them vital for embedded systems and low-level programming.</li>
+                                            <li><strong>Fixed Memory Location:</strong> SRFs have fixed addresses within the system's memory map, allowing the CPU to access them directly for specific control operations.</li>
+                                            <li><strong>Volatile Nature:</strong> The contents of SRFs are typically volatile, meaning they are cleared when the power is turned off or reset.</li>
+                                            <li><strong>Fast and Direct Access:</strong> The CPU can access SRFs with minimal delay, making them efficient for real-time hardware control.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <style>
+.new-box .text-box {
+    text-align: justify; /* Justifies all text */
+    font-size: 18px; /* Sets consistent font size */
+    color: #ffffff; /* White text color */
+    line-height: 1.8; /* Improves readability */
+    padding: 20px; /* Adds padding around the text */
+    background-color: #333333; /* Adds a dark background for contrast */
+    border-radius: 8px; /* Adds rounded corners for aesthetics */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.new-box .text-box ul {
+    margin: 10px 0;
+    padding-left: 20px; /* Adds indentation for list items */
+    list-style-type: disc; /* Standard bullet points */
+}
+
+.new-box .text-box ul li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+    font-size: 18px; /* Matches paragraph font size */
+    line-height: 1.8; /* Matches paragraph line height */
+}
+
+.new-box h3 {
+    font-size: 22px; /* Slightly larger for the heading */
+    font-weight: bold;
+    color: #ffcc00; /* Highlighted heading color */
+    margin-bottom: 15px;
+}
+
+
+                    </style>
+                    
+            </div>
+        </section>
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Address</h4>
+                        <hr/>
+                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
+                        </p>
+                        <a href="#" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Useful Links</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Community</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Free Goods</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Recent Posts</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
+                                <p class="post-date">May 25, 2017</p>
+                            </li>
+                            <li>
+                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
+                                <p class="post-date">May 25, 2017</p>
+                            </li>
+                            <li>
+                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
+                                <p class="post-date">May 25, 2017</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    © Copyrights 2024 Computer Organization Architecture. Designed by <a href="#">Prasad Huddar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

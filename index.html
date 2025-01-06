@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/skin.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="./script/index.js"></script>
+</head>
+
+<body id="wrapper">
+    <section id="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 top-header-links">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="social_links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+                        <a class="navbar-brand" href="#">
+                            <h1>COA</h1>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="about.course.html">About Course</a></li>
+                            <li><a href="courseproject.html">My Projects</a></li>
+                            <li><a href="courselearning.html">Course Learning</a></li>
+                            <li><a href="studentdetails.html">Student Details</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/.nav-ends -->
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Background Video -->
+                <video class="bg-video" autoplay muted loop>
+                    <source src="img/video_preview_h264 (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        
+                <style>
+                    /* Style for the background video */
+                    .bg-video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: -1; /* Keeps the video behind the content */
+                    }
+        
+                    /* Ensures the content appears over the video and aligns at the top */
+                    .carousel-caption {
+                        position: absolute;
+                        top: 20%;  /* Position the caption towards the top */
+                        left: 50%;
+                        transform: translateX(-50%); /* Center horizontally */
+                        color: #ffffff;
+                        text-align: center;
+                        z-index: 1;
+                        padding: 30px 25px; /* Increased padding for better readability */
+                        width: 60%; /* Adjust width for a more compact box */
+                        font-size: 28px; /* Larger font size for better readability */
+                        font-weight: bold; /* Bold text for clarity */
+                        background: rgba(0, 0, 0, 0.7); /* Stronger opaque background */
+                        border-radius: 10px;
+                        box-sizing: border-box; /* Ensures padding doesn't overflow */
+                    }
+        
+                    /* Strong text shadow for better visibility */
+                    .carousel-caption h1, .carousel-caption p {
+                        text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+                    }
+        
+                    /* Optionally, adjust the font size for responsiveness */
+                    @media (max-width: 768px) {
+                        .carousel-caption {
+                            font-size: 24px; /* Slightly smaller font on smaller screens */
+                        }
+                    }
+                </style>
+        
+                <div class="carousel-caption">
+                    <h1 class="banner_heading">COMPUTER <span>ORGANIZATION</span> AND ARCHITECTURE</h1>
+                    <p class="banner_txt">Computer organization and architecture is the foundation of computing, defining how computers are designed and built. It encompasses both the physical components of a computer system and the theoretical principles that guide its operation, essentially providing the blueprint for how computers function.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+        <!-- Left and right controls -->
+
+    </div>
+
+
+    <section id="studentdetails">
+        <div class="image-holder col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
+            <div class="background-imgholder">
+                <img src="img/1.jpg" alt="about" class="img-responsive" style="display:none;" />
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="col-md-7 col-md-offset-5 col-sm-8 col-sm-offset-2 col-xs-12 text-inner">
+                <div class="text-block">
+                    <div class="section-heading">
+                        <h1>Student<span>Details</span></h1>
+                        <a class="portfolio-link" href="studentdetails.html">
+                            <button type="button" class="btn btn-primary slide">
+                                Learn More <i class="fa fa-link"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            /* Add space below the button */
+            .section-heading button {
+                margin-bottom: 20px; /* Adjust the value to your preferred space */
+                margin-left: 45px;
+            }
+        </style>
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Quick Links</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="about.course.html">About Course</li>
+                            <li><a href="courseproject.html">Course Project</a></li>
+                            <li><a href="courselearning.html">Course Learning</a></li>
+                            <li><a href="studentdetails.html">Student Details</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    © Copyrights 2024 Computer Organization Architecture. Designed by <a href="#">Prasad Huddar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="panel">
+        <div id="panel-admin">
+            <div class="panel-admin-box">
+                <div id="tootlbar_colors">
+                    <button class="color" style="background-color:#1abac8;" onclick="mytheme(0)"></button>
+                    <button class="color" style="background-color:#ff8a00;" onclick="mytheme(1)"> </button>
+                    <button class="color" style="background-color:#b4de50;" onclick="mytheme(2)"> </button>
+                    <button class="color" style="background-color:#e54e53;" onclick="mytheme(3)"> </button>
+                    <button class="color" style="background-color:#1abc9c;" onclick="mytheme(4)"> </button>
+                    <button class="color" style="background-color:#159eee;" onclick="mytheme(5)"> </button>
+                </div>
+            </div>
+
+        </div>
+        <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
+    </div>
+
+</html>

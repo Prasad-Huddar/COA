@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Course Project</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Font Awesome Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/skin.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="./script/index.js"></script>
+</head>
+<style>
+.large-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #a6c4cf;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.large-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.large-box img {
+    width: 30%; /* Reduced image size */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.large-box .text-box {
+    width: 70%;
+}
+
+.large-box .text-box p,
+.large-box .text-box ul {
+    font-size: 20px;
+    color: #070707;
+    line-height: 1.6;
+}
+
+.large-box .text-box ul li {
+    margin-bottom: 10px;
+}
+
+.large-box .text-box h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Gap between the first and second boxes */
+/* New box layout for 8-bit ALU with side margins */
+.new-box {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    padding: 20px;
+    margin: 30px auto; /* Auto margin for centering, 30px top and bottom */
+    margin-left: 20px; /* Added left margin */
+    margin-right: 20px; /* Added right margin */
+    background-color: #353535;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.new-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.new-box .text-box {
+    width: 100%;
+}
+
+.new-box .text-box h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.new-box .text-box p {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.new-box .text-box ul {
+    font-size: 20px;
+    color: #2a2929;
+    line-height: 1.6;
+}
+
+.new-box .text-box ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Specific color for the "What is an ALU?" heading */
+.subsection3 h2 {
+    color: black; /* Black color for the heading */
+}
+
+/* Adjusted image section for consistency */
+.image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.image-section img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+</style>
+
+<body id="wrapper">
+
+    <section id="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 top-header-links">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="social_links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <h1>COA</h1>
+                    </a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="courselearning.html">Course Learning</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="courseproject-page">
+        <div class="subsection1">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h1>N-Bit Arithmethic and <span>Logical Unit</span></h1>
+                </div>
+            </div>
+        </div>
+
+        
+        <section id="courseproject-page">
+            <div class="subsection3">
+                <div class="container text-center">
+                    <h2>What is an ALU?</h2>
+        
+                    <!-- First large box layout -->
+                    <div class="large-box">
+                        <img src="img/ALU dgm.jpeg" alt="ALU Diagram">
+                        <div class="text-box">
+                            <p>The Arithmetic Logic Unit (ALU) is a crucial component of a computer's central processing unit (CPU). It performs arithmetic (addition, subtraction, multiplication, division) and logical (AND, OR, NOT, XOR) operations on integer binary numbers. The ALU handles various operations that are essential for computing tasks, making it an integral part of any processor architecture.</p>
+                            <ul>
+                                <li>Arithmetic Operations: Includes basic mathematical operations such as addition, subtraction, multiplication, and division.</li>
+                                <li>Logical Operations: Includes operations that compare and manipulate data, such as AND, OR, XOR, NOT, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- New box layout -->
+                    <div class="new-box">
+                        <div class="text-box">
+                            <h3>8-bit ALU</h3>
+                            <p>An 8-bit ALU (Arithmetic and Logic Unit) processes 8-bit operands and performs a variety of logical and arithmetic operations. For logical operations, it utilizes basic logic gates, such as AND, OR, NOT, XOR, NAND, and NOR, to manipulate the bits of the input operands. These operations are fundamental for decision-making processes in computing, such as comparison and conditional branching.</p>
+                            <p>For arithmetic operations, the ALU relies on supporting components like an adder for addition, a subtractor for subtraction, and in some cases, specialized circuits for multiplication and division. These arithmetic functions enable the ALU to perform essential calculations necessary for tasks such as number processing and data manipulation.</p>
+                            <p>Additionally, the B-bit ALU is capable of various shift operations, which modify the position of bits within the operand. These include left shift and right shift, which move bits in their respective directions while filling the vacated positions with zeros. It also supports left rotate and right rotate, where the shifted-out bits are reintroduced at the opposite end of the operand, effectively performing a circular shift. These operations are commonly used in bitwise manipulation tasks, such as adjusting values, optimizing storage, or implementing algorithms like encryption.</p>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    /* General styles for all text boxes */
+.text-box p,
+.text-box ul {
+    font-size: 20px; /* Consistent font size for paragraphs and list items */
+    color: #555; /* Neutral text color for readability */
+    line-height: 1.6; /* Proper line spacing */
+    text-align: justify; /* Justify text alignment */
+    margin-bottom: 20px; /* Space below paragraphs and lists */
+}
+
+/* List-specific styles */
+.text-box ul {
+    padding-left: 30px; /* Indentation for list items */
+    list-style-type: disc; /* Bullet points for list items */
+}
+
+.text-box ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Headings for large-box and new-box */
+.text-box h3 {
+    font-size: 24px; /* Slightly larger font size for headings */
+    font-weight: bold;
+    color: #333; /* Stronger contrast for headings */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+                </style>
+
+
+                        <!-- Two images section -->
+                        <div class="text-box">
+                            <h3><center>Diagram</center></h3>
+                        <div class="image-section">
+                            <img src="img/Screenshot_5-1-2025_173335_amoghtalawar.github.io.jpeg" alt="Image 1">
+                            <img src="img/big.jpeg" alt="Image 2">
+                        </div>
+                        <style>
+                            /* New container for images with black background */
+.image-section.black-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    background-color: black; /* Set the background color to black */
+    padding: 20px; /* Optional padding to create space inside */
+}
+
+.image-section.black-background img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-section.black-background img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+                        </style>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+    
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Address</h4>
+                        <hr/>
+                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
+                        </p>
+                        <a href="#" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Useful Links</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Community</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Free Goods</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <h4>Recent Posts</h4>
+                        <hr/>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
+                                <p class="post-date">May 25, 2017</p>
+                            </li>
+                            <li>
+                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
+                                <p class="post-date">May 25, 2017</p>
+                            </li>
+                            <li>
+                                <a href="#" class="post">Lorem ipsum dolor sit amet</a>
+                                <p class="post-date">May 25, 2017</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    © Copyrights 2024 Computer Organization Architecture. Designed by <a href="#">Prasad Huddar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
