@@ -83,22 +83,6 @@
 
         <!-- Caption -->
         <div class="carousel-caption">
-           
-            
-        </div>
-
-        <style>
-            /* Style for the background video */
-            <div class="carousel-inner">
-    <div class="item active">
-        <!-- Background Video -->
-        <video class="bg-video" autoplay muted loop>
-            <source src="img/video_preview_h264 (1).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <!-- Caption -->
-        <div class="carousel-caption">
             <h1>Clear and Visible Text</h1>
             <p>This text is now more readable over the background video.</p>
         </div>
@@ -113,8 +97,7 @@
                 height: 100%;
                 object-fit: cover;
                 z-index: -1; /* Keeps the video behind the content */
-                filter: brightness(70%) contrast(120%) saturate(150%);
-                /* Adjust brightness, contrast, and saturation */
+		filter: brightness(70%) contrast(120%) saturate(150%);
             }
 
             /* Caption styling */
@@ -130,7 +113,7 @@
                 width: 60%; /* Adjust width for a more compact box */
                 font-size: 28px; /* Larger font size for better readability */
                 font-weight: bold; /* Bold text for clarity */
-                background: rgba(0, 0, 0, 0.85); /* Strong opaque background */
+                background: rgba(0, 0, 0, 0.10); /* Strong opaque background */
                 border-radius: 10px;
                 box-sizing: border-box; /* Ensures padding doesn't overflow */
             }
@@ -151,39 +134,6 @@
     </div>
 </div>
 
-            /* Caption styling */
-            .carousel-caption {
-                position: absolute;
-                top: 20%; /* Position the caption towards the top */
-                left: 50%;
-                transform: translateX(-50%); /* Center horizontally */
-                color: #ffffff; /* Pure white font for contrast */
-                text-align: center;
-                z-index: 1;
-                padding: 30px 25px; /* Increased padding for better readability */
-                width: 60%; /* Adjust width for a more compact box */
-                font-size: 28px; /* Larger font size for better readability */
-                font-weight: bold; /* Bold text for clarity */
-                background: rgba(0, 0, 0, 0.25); /* Strong opaque background */
-                border-radius: 10px;
-                box-sizing: border-box; /* Ensures padding doesn't overflow */
-            }
-
-            /* Strong text shadow for better visibility */
-            .carousel-caption h1, .carousel-caption p {
-                text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Stronger shadow */
-            }
-
-            /* Responsive styling for smaller screens */
-            @media (max-width: 768px) {
-                .carousel-caption {
-                    font-size: 20px; /* Adjust font size for smaller screens */
-                    width: 80%; /* Reduce width for better layout */
-                }
-            }
-        </style>
-    </div>
-</div>
 
         
                 <div class="carousel-caption">
