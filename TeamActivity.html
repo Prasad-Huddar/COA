@@ -375,17 +375,16 @@
     </style>
 
 <script>
-    function downloadFile() {
-        const fileUrl = 'https://raw.githubusercontent.com/Prasad-Huddar/COA/main/8bit%20immedate%20Team%204%20(1).circ'; // Correct raw URL
-        const a = document.createElement('a');
-        a.href = fileUrl;
-        a.download = '8bit_immedate_Team_4.circ'; // Custom file name for download
-        a.click();
-    }
+  function downloadFile() {
+    
+    const fileUrl = 'src/8bit immedate Team 4.circ';
+    const a = document.createElement('a');
+    a.href = fileUrl;
+    a.download = fileUrl.split('/').pop();  // This will set the download name to the file name
+    a.click();
+  }
 </script>
 
-
-    </script>
 </div>
 	</div>
         <!-- Section 6 -->
